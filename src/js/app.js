@@ -233,16 +233,6 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
 darkModeToggle.addEventListener('click', toggleDarkMode);
 // DARKMODE LOGIC END
 
-// LOADER
-const loader = document.getElementById('loader');
-const form = document.querySelector('form');
-const body = document.querySelector('body');
-
-window.addEventListener('load', function () {
-  loader.style.display = 'none';
-});
-// LOADER END
-
 // fade-in on load
 document.addEventListener('DOMContentLoaded', function () {
   const animateElements = document.querySelectorAll('.animate-fade-in');
