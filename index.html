@@ -16,7 +16,6 @@
     <meta name="theme-color" content="#8b5cf6" />
     <meta name="language" content="English" />
     <meta name="robots" content="index, follow" />
-    <meta http-equiv="refresh" content="30" />
     <meta http-equiv="Content-Type" content="text/html" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./src/css/app.css" as="style" />
@@ -258,24 +257,6 @@
                     ></path>
                   </g>
                 </svg>
-
-                <script>
-                  const tween = KUTE.fromTo(
-                    '#blob1',
-                    {
-                      path: '#blob1',
-                    },
-                    {
-                      path: '#blob2',
-                    },
-                    {
-                      repeat: 999,
-                      duration: 3000,
-                      yoyo: true,
-                    }
-                  );
-                  tween.start();
-                </script>
               </span>
               <!-- Animated Blob End --->
             </div>
@@ -1339,13 +1320,33 @@
     <script
       src="https://kit.fontawesome.com/024c1ae29f.js"
       crossorigin="anonymous"
-      defer async
+      defer
+      async
     ></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"
-      defer async
+      defer
+      async
     ></script>
+
+    <script defer async>
+      const tween = KUTE.fromTo(
+        '#blob1',
+        {
+          path: '#blob1',
+        },
+        {
+          path: '#blob2',
+        },
+        {
+          repeat: 999,
+          duration: 3000,
+          yoyo: true,
+        }
+      );
+      tween.start();
+    </script>
 
     <script defer async>
       if (
@@ -1361,7 +1362,9 @@
 
     <script type="module" src="./src/js/app.js" async></script>
 
-    <script defer async
+    <script
+      defer
+      async
       type="module"
       src="node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
     ></script>
