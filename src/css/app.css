@@ -28,19 +28,6 @@ body:hover > #trailer {
   font-display: swap;
 }
 
-.animate-fade-in {
-  animation: fade-in 1s ease-in-out;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .hide-scrollbar {
   overflow-y: scroll; /* Add the ability to scroll */
 }
@@ -73,9 +60,6 @@ body:hover > #trailer {
   transition: opacity 400ms ease;
 }
 
-.poppins {
-  font-family: 'Poppins', sans-serif;
-}
 
 .active {
   @apply text-primary;
