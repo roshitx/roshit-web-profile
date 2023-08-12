@@ -10,6 +10,24 @@ body:hover > #trailer {
   opacity: 1;
 }
 
+@font-face {
+  font-family: 'latobold';
+  src: url('/src/fonts/lato-bold-webfont.woff2') format('woff2'),
+    url('/src/fonts/lato-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('/src/fonts/poppins-regular-webfont.woff2') format('woff2'),
+    url('/src/fonts/poppins-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .animate-fade-in {
   animation: fade-in 1s ease-in-out;
 }
@@ -141,4 +159,3 @@ body:hover > #trailer {
 * {
   -ms-tap-highlight-color: transparent;
 }
-
