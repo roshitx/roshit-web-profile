@@ -1,4 +1,4 @@
-User-agent: *
-Disallow: /src/css/
-Disallow: /src/js/
-Disallow: style.css
+user-agent: *
+disallow: /src/css/
+disallow: /src/js/
+disallow: style.css
