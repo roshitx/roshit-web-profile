@@ -1,8 +1,17 @@
 {
     "theme_color": "#8b5cf6",
     "background_color": "#0f172a",
-    "display": "browser",
+    "display": "standalone",
     "scope": "/",
-    "start_url": "/",
-    "description": "roshit web app"
+    "start_url": "./",
+    "description": "roshit web app",
+    "name": "roshit profile",
+    "short_name": "roshit",
+    "icons": [
+      {
+        "src": "src/assets/pp.webp",
+        "sizes": "32x32",
+        "type": "image/webp"
+      }
+    ]
   }
