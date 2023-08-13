@@ -3,7 +3,7 @@
 import initTrailer from './trailer';
 import initHamburger from './hamburger';
 import initNavbarFixed from './navbar-fixed';
-import initClickOutsite from './clickoutside';
+import initClickOutside from './clickoutside';
 import initActiveLinks from './active-links';
 import initArrowToTop from './arrow-to-top';
 import initDarkMode from './dark-mode';
@@ -13,7 +13,7 @@ import initLoader from './loader';
 initTrailer();
 initHamburger();
 initNavbarFixed();
-initClickOutsite();
+initClickOutside();
 initActiveLinks();
 initArrowToTop();
 initDarkMode();

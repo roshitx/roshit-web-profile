@@ -1,4 +1,5 @@
-const initClickOutsite = () => {
+const initClickOutside = () => {
+  const navMenu = document.querySelector('#nav-menu');
   // CLICK OUTSIDE HAMBURGER
   window.addEventListener('click', function (e) {
     if (e.target != hamburger && e.target != navMenu) {
@@ -9,4 +10,4 @@ const initClickOutsite = () => {
   // CLICK OUTSIDE HAMBURGER END
 };
 
-export default initClickOutsite;
+export default initClickOutside;
