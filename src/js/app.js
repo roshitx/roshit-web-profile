@@ -1,6 +1,7 @@
 // main.js
 
 import initTrailer from './trailer';
+import initTypingEffect from './typing-effect';
 import initHamburger from './hamburger';
 import initNavbarFixed from './navbar-fixed';
 import initClickOutside from './clickoutside';
@@ -11,6 +12,7 @@ import initLoader from './loader';
 
 // Jalankan fungsi dari setiap modul
 initTrailer();
+initTypingEffect();
 initHamburger();
 initNavbarFixed();
 initClickOutside();

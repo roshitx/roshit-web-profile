@@ -37,6 +37,23 @@ body:hover > #trailer {
   font-display: swap;
 }
 
+/* Cursor */
+.typed-cursor {
+  display: inline-block;
+  color: #8b5cf6;
+  background-color: #8b5cf6;
+  width: 5px; /* Sesuaikan lebar cursor */
+  height: 20px;
+  opacity: 0.7; /* Opasitas cursor */
+}
+
+/* If fade out option is set */
+.typed-fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+
 .hide-scrollbar {
   overflow-y: scroll; /* Add the ability to scroll */
 }
