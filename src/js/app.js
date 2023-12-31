@@ -9,6 +9,7 @@ import initActiveLinks from './active-links';
 import initArrowToTop from './arrow-to-top';
 import initDarkMode from './dark-mode';
 import initLoader from './loader';
+import initCopyrights from './copyright';
 
 // Jalankan fungsi dari setiap modul
 initTrailer();
@@ -20,3 +21,4 @@ initActiveLinks();
 initArrowToTop();
 initDarkMode();
 initLoader();
+initCopyrights();
