@@ -1,0 +1,28 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: roshit
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/project/roshit-web-profile
+            git pull origin main
+            npm install
+            npm run build
+            sudo cp -r dist/* /var/www/roshit-web/
+            sudo chown -R www-data:www-data /var/www/roshit-web/
