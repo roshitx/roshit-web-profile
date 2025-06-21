@@ -10,19 +10,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: 📦 Checkout Repo
         uses: actions/checkout@v3
 
-      - name: Deploy via SSH
+      - name: 🚀 Deploy to VPS
+        id: deploy
         uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
           username: roshit
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ~/project/roshit-web-profile
-            git pull origin main
-            npm install
-            npm run build
-            sudo cp -r dist/* /var/www/roshit-web/
-            sudo chown -R www-data:www-data /var/www/roshit-web/
+            bash ~/home/roshit/project/roshit-web-profile/deploy/deploy-web.sh
+
+      - name: ✅ Notify Telegram on Success
+        if: success()
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            ✅ *Deploy Sukses*
+            Project: roshit-web-profile
+            VPS: ${{ secrets.VPS_HOST }}
+            Branch: main
+            Time: ${{ github.event.head_commit.timestamp }}
+
+      - name: ❌ Notify Telegram on Failure
+        if: failure()
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            ❌ *Deploy GAGAL*
+            Cek CI log di GitHub Actions
+            VPS: ${{ secrets.VPS_HOST }}
+            Branch: main
