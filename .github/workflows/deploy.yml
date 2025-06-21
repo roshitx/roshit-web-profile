@@ -35,6 +35,7 @@ jobs:
             VPS: ${{ secrets.VPS_HOST }}
             Branch: main
             Time: ${{ github.event.head_commit.timestamp }}
+            Anjayy mabarrrr!
 
       - name: ❌ Notify Telegram on Failure
         if: failure()
