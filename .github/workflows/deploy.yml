@@ -21,7 +21,7 @@ jobs:
           username: roshit
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            bash ~/home/roshit/project/roshit-web-profile/deploy/deploy-web.sh
+            bash ~/project/roshit-web-profile/deploy/deploy-web.sh
 
       - name: ✅ Notify Telegram on Success
         if: success()
